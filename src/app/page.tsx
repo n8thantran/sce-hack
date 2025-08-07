@@ -11,6 +11,7 @@ export default function Home() {
     seconds: 0
   });
   const [countdownPhase, setCountdownPhase] = useState('start'); // 'start' or 'submission'
+  const [activeSection, setActiveSection] = useState(1); // Track which section is active
 
   useEffect(() => {
     const startDate = new Date("2025-09-13T10:00:00-07:00"); // September 13, 2025 at 10:00 AM PT
@@ -54,6 +55,160 @@ export default function Home() {
 
     return () => clearInterval(timer);
   }, []);
+
+  // Function to get content for each section
+  const getSectionContent = (section: number) => {
+    const sections = {
+      1: {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Lorem ipsum dolor sit amet <strong className="text-foreground">consectetur adipiscing elit</strong> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <strong className="text-accent">voluptate velit esse</strong> cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident.
+            </p>
+            
+            <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4 mb-8 flex items-start gap-3">
+              <div className="text-yellow-400 text-xl">⚠</div>
+              <div>
+                <span className="text-foreground font-medium">Lorem ipsum </span>
+                <a href="#" className="text-accent underline hover:text-accent/80">dolor sit amet consectetur</a>
+                <span className="text-foreground"> adipiscing elit</span>
+              </div>
+            </div>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Lorem ipsum dolor sit?</h3>
+            
+            <ul className="space-y-3 text-tertiary">
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Sed do eiusmod tempor incididunt ut labore et dolore magna</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Ut enim ad minim veniam quis nostrud exercitation</span>
+              </li>
+            </ul>
+          </>
+        )
+      },
+      2: {
+        title: "Set Up Instructions",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Configuration Steps</h3>
+            
+            <ol className="space-y-3 text-tertiary list-decimal list-inside">
+              <li>At vero eos et accusamus et iusto odio dignissimos</li>
+              <li>Ducimus qui blanditiis praesentium voluptatum deleniti</li>
+              <li>Atque corrupti quos dolores et quas molestias excepturi</li>
+              <li>Sint occaecati cupiditate non provident similique</li>
+            </ol>
+          </>
+        )
+      },
+      3: {
+        title: "Important Reminders",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            </p>
+            
+            <div className="bg-red-900/20 border border-red-600 rounded-lg p-4 mb-6">
+              <div className="text-red-400 font-bold mb-2">⚠ Critical Reminder</div>
+              <p className="text-tertiary">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+            </div>
+            
+            <ul className="space-y-3 text-tertiary">
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Quis autem vel eum iure reprehenderit qui in ea voluptate</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Velit esse quam nihil molestiae consequatur</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</span>
+              </li>
+            </ul>
+          </>
+        )
+      },
+      4: {
+        title: "Submission Guidelines",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+            </p>
+            
+            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-6">
+              <div className="text-blue-400 font-bold mb-2">📋 Submission Checklist</div>
+              <p className="text-tertiary">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
+            </div>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Required Components</h3>
+            
+            <ul className="space-y-3 text-tertiary">
+              <li className="flex items-start gap-3">
+                <span className="text-green-400">✓</span>
+                <span>Facere possimus, omnis voluptas assumenda est</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400">✓</span>
+                <span>Omnis dolor repellendus temporibus autem quibusdam</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400">✓</span>
+                <span>Et aut officiis debitis aut rerum necessitatibus saepe</span>
+              </li>
+            </ul>
+          </>
+        )
+      },
+      5: {
+        title: "Resources & Links",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Helpful Links</h3>
+            
+            <div className="space-y-4 mb-6">
+              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
+                <div className="text-accent font-medium">Lorem ipsum documentation</div>
+                <div className="text-sm text-tertiary">Comprehensive guide to getting started</div>
+              </a>
+              
+              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
+                <div className="text-accent font-medium">Dolor sit amet tutorials</div>
+                <div className="text-sm text-tertiary">Step-by-step video tutorials</div>
+              </a>
+              
+              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
+                <div className="text-accent font-medium">Consectetur adipiscing examples</div>
+                <div className="text-sm text-tertiary">Sample projects and code snippets</div>
+              </a>
+            </div>
+          </>
+        )
+      }
+    };
+    
+    return sections[section as keyof typeof sections] || sections[1];
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -149,94 +304,83 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Timeline Section - Linear progress bar style */}
+      {/* Information Section - Box layout */}
       <section className="bg-secondary/5 border-t border-secondary py-12">
         <div className="max-w-6xl mx-auto px-6">
-          
-          {/* Timeline Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">EVENT SCHEDULE</h2>
-            <div className="text-tertiary">Follow the timeline below</div>
-          </div>
-          
-          {/* Linear Timeline */}
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute top-6 left-0 right-0 h-0.5 bg-secondary"></div>
-            <div className="absolute top-6 left-0 h-0.5 bg-accent" style={{width: '100%'}}></div>
+          <div className="grid lg:grid-cols-12 gap-8">
             
-            {/* Timeline Points */}
-            <div className="flex justify-between relative">
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">10:00 AM</div>
-                <div className="text-sm font-medium text-foreground">Check-in / Breakfast</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">10:30 AM</div>
-                <div className="text-sm font-medium text-foreground">Opening / Kickoff</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">11:00 AM</div>
-                <div className="text-sm font-medium text-foreground">Hackathon Begins</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">1:00 PM</div>
-                <div className="text-sm font-medium text-foreground">Lunch Break</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">6:00 PM</div>
-                <div className="text-sm font-medium text-foreground">Project Submissions</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-accent border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-accent mb-1">7:00 PM</div>
-                <div className="text-sm font-medium text-foreground">Presentations</div>
-              </div>
-              
-              <div className="flex flex-col items-center text-center min-w-0 flex-1">
-                <div className="w-3 h-3 rounded-full bg-red-500 border-2 border-background mb-4 relative z-10"></div>
-                <div className="text-lg font-bold text-red-500 mb-1">8:00 PM</div>
-                <div className="text-sm font-medium text-foreground">Awards & Closing</div>
+            {/* Left Sidebar Navigation */}
+            <div className="lg:col-span-3">
+              <div className="bg-background border border-secondary rounded-lg p-6">
+                <nav className="space-y-4">
+                  <button 
+                    onClick={() => setActiveSection(1)}
+                    className={`w-full text-left text-lg font-bold pb-2 transition-colors ${
+                      activeSection === 1 
+                        ? 'text-foreground border-b border-secondary' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    1. INTRODUCTION
+                  </button>
+                  <button 
+                    onClick={() => setActiveSection(2)}
+                    className={`w-full text-left text-lg font-bold transition-colors ${
+                      activeSection === 2 
+                        ? 'text-foreground border-b border-secondary pb-2' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    2. SET UP
+                  </button>
+                  <button 
+                    onClick={() => setActiveSection(3)}
+                    className={`w-full text-left text-lg font-bold transition-colors ${
+                      activeSection === 3 
+                        ? 'text-foreground border-b border-secondary pb-2' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    3. REMINDERS
+                  </button>
+                  <button 
+                    onClick={() => setActiveSection(4)}
+                    className={`w-full text-left text-lg font-bold transition-colors ${
+                      activeSection === 4 
+                        ? 'text-foreground border-b border-secondary pb-2' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    4. SUBMISSION
+                  </button>
+                  <button 
+                    onClick={() => setActiveSection(5)}
+                    className={`w-full text-left text-lg font-bold transition-colors ${
+                      activeSection === 5 
+                        ? 'text-foreground border-b border-secondary pb-2' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    5. RESOURCES
+                  </button>
+                </nav>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Description Section */}
-      <section className="py-16 border-t border-secondary">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Build. Code. Create.</h2>
-          
-          <p className="text-lg md:text-xl text-tertiary mb-8 max-w-2xl mx-auto">
-            Join us for a full-day hackathon where creativity meets technology and ideas become reality.
-          </p>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="border-2 border-accent hover:bg-accent hover:text-background text-accent px-12 py-4 font-bold text-lg tracking-wide transition-all">
-              REGISTER NOW
-            </button>
-            <button className="bg-accent hover:bg-accent/80 text-background px-12 py-4 font-bold text-lg tracking-wide transition-all">
-              VIEW DETAILS
-            </button>
-          </div>
-
-          {/* Tags */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <span className="border border-secondary text-tertiary px-4 py-2 text-sm font-medium tracking-wide">WEB DEVELOPMENT</span>
-            <span className="border border-secondary text-tertiary px-4 py-2 text-sm font-medium tracking-wide">MOBILE APPS</span>
-            <span className="border border-secondary text-tertiary px-4 py-2 text-sm font-medium tracking-wide">NETWORKING</span>
+            
+            {/* Main Content Area */}
+            <div className="lg:col-span-9">
+              <div className="bg-background border border-secondary rounded-lg p-8">
+                
+                {/* Dynamic Content Based on Active Section */}
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                  {getSectionContent(activeSection).title}
+                </h2>
+                
+                {getSectionContent(activeSection).content}
+                
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
