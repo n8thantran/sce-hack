@@ -154,7 +154,7 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Here's the detailed schedule for the event day and important reminders to ensure you have the best experience.
+              Here&pos;s the detailed schedule for the event day and important reminders to ensure you have the best experience.
             </p>
             
             <h3 className="text-xl font-bold text-foreground mb-4">Event Schedule</h3>
