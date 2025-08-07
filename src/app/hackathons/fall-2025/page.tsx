@@ -161,49 +161,49 @@ export default function Fall2025Hackathon() {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">10:00 AM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Check-in & Welcome</div>
                   <div className="text-tertiary text-sm">Registration and team formation</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">10:30 AM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Opening Ceremony</div>
                   <div className="text-tertiary text-sm">Theme presentation and rules overview</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">11:00 AM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Hacking Begins!</div>
                   <div className="text-tertiary text-sm">Start building your projects</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">1:00 PM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Lunch Break</div>
                   <div className="text-tertiary text-sm">Food provided by SCE</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">3:00 PM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
-                  <div className="text-foreground font-medium">Workshop: AI/ML Basics</div>
+                  <div className="text-foreground font-medium">Workshop: TBD</div>
                   <div className="text-tertiary text-sm">Optional workshop for beginners</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">5:30 PM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Project Submissions Due</div>
                   <div className="text-tertiary text-sm">Final deadline for submissions</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">6:00 PM</span>
+                <span className="text-accent font-bold">TBD</span>
                 <div>
                   <div className="text-foreground font-medium">Presentations & Judging</div>
                   <div className="text-tertiary text-sm">Showcase your projects</div>
@@ -388,69 +388,31 @@ export default function Fall2025Hackathon() {
               FALL HACKATHON
             </h1>
             <div className="text-2xl md:text-3xl text-accent font-medium">
-              September 13, 2025 at 10:00 AM PT
+              September 13, 2025 - Time TBD
             </div>
             <div className="text-lg md:text-xl text-tertiary mt-2">
-              Lorem Ipsum Theme
+              Location TBD
             </div>
             {countdownPhase === 'submission' && (
               <div className="text-lg md:text-xl text-red-400 mt-2 font-semibold">
-                ⏰ PROJECT SUBMISSIONS DUE AT 5:30 PM
+                ⏰ PROJECT SUBMISSIONS DUE TIME TBD
               </div>
             )}
           </div>
 
-          {/* Countdown Timer - Large and centered */}
+          {/* Event Info */}
           <div className="mb-20">
-            {/* Countdown Phase Indicator */}
-            <div className="text-center mb-6">
-              {countdownPhase === 'start' && (
-                <div className="text-xl md:text-2xl text-tertiary font-medium">
-                  TIME UNTIL HACKATHON STARTS
-                </div>
-              )}
-              {countdownPhase === 'submission' && (
-                <div className="text-xl md:text-2xl text-accent font-bold animate-pulse">
-                  ⚡ TIME UNTIL PROJECT SUBMISSION DEADLINE ⚡
-                </div>
-              )}
-            </div>
-
-            <div className="flex justify-center items-center gap-8 md:gap-16 mb-8">
-              <div className="text-center">
-                <div className="text-6xl md:text-8xl font-bold text-foreground mb-2 font-mono">
-                  {timeLeft.days.toString().padStart(2, '0')}
-                </div>
-                <div className="text-sm md:text-base font-medium text-tertiary tracking-widest">DAYS</div>
+            <div className="text-center">
+              <div className="text-xl md:text-2xl text-tertiary font-medium mb-6">
+                SCHEDULE AND LOCATION DETAILS
               </div>
-              
-              <div className="text-center">
-                <div className="text-6xl md:text-8xl font-bold text-foreground mb-2 font-mono">
-                  {timeLeft.hours.toString().padStart(2, '0')}
-                </div>
-                <div className="text-sm md:text-base font-medium text-tertiary tracking-widest">HOURS</div>
+              <div className="text-3xl md:text-4xl font-bold text-foreground tracking-widest mb-4">
+                TO BE DETERMINED
               </div>
-              
-              <div className="text-center">
-                <div className="text-6xl md:text-8xl font-bold text-foreground mb-2 font-mono">
-                  {timeLeft.minutes.toString().padStart(2, '0')}
-                </div>
-                <div className="text-sm md:text-base font-medium text-tertiary tracking-widest">MINUTES</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-6xl md:text-8xl font-bold text-foreground mb-2 font-mono">
-                  {timeLeft.seconds.toString().padStart(2, '0')}
-                </div>
-                <div className="text-sm md:text-base font-medium text-tertiary tracking-widest">SECONDS</div>
+              <div className="text-lg text-tertiary">
+                Stay tuned for updates on timing and venue information!
               </div>
             </div>
-
-            {countdownPhase === 'ended' && (
-              <div className="text-3xl md:text-4xl font-bold text-foreground tracking-widest">
-                HACKATHON HAS ENDED
-              </div>
-            )}
           </div>
         </div>
       </main>
