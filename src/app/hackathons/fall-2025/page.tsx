@@ -15,8 +15,8 @@ export default function Fall2025Hackathon() {
   const [activeSection, setActiveSection] = useState(1); // Track which section is active
 
   useEffect(() => {
-    const startDate = new Date("2025-09-13T10:00:00-07:00"); // September 13, 2025 at 10:00 AM PT
-    const submissionDate = new Date("2025-09-13T18:00:00-07:00"); // September 13, 2025 at 6:00 PM PT
+    const startDate = new Date("2025-09-05T09:15:00-07:00"); // September 5, 2025 at 9:15 AM PT
+    const submissionDate = new Date("2025-09-05T15:00:00-07:00"); // September 5, 2025 at 3:00 PM PT
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -61,283 +61,186 @@ export default function Fall2025Hackathon() {
   const getSectionContent = (section: number) => {
     const sections = {
       1: {
-        title: "Lorem Ipsum Dolor Sit Amet?",
+        title: "Introduction",
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet <strong className="text-foreground">consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Join us for the <strong className="text-foreground">Fall 2025 Hackathon</strong> - a day of innovation, creativity, and collaborative coding! Whether you're a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
             </p>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3">
-              <div className="text-blue-400 text-xl">ℹ️</div>
+              <div className="text-blue-400 text-xl">🏆</div>
               <div>
-                <span className="text-foreground font-medium">Lorem ipsum: </span>
-                <span className="text-foreground">Dolor sit amet consectetur adipiscing elit sed do eiusmod</span>
+                <span className="text-foreground font-medium">Prizes: </span>
+                <span className="text-foreground">TBD - Exciting prizes to be announced soon!</span>
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Ipsum Dolor</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">What to Expect</h3>
             
             <ul className="space-y-3 text-tertiary">
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Lorem ipsum dolor sit amet consectetur</span>
+                <span>6 hours of focused coding and development time</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Sed do eiusmod tempor incididunt ut labore</span>
+                <span>Guest speaker presentation and industry insights</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Ut enim ad minim veniam quis nostrud</span>
+                <span>Two hands-on technical workshops to boost your skills</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Duis aute irure dolor in reprehenderit</span>
+                <span>Networking opportunities with fellow developers</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Excepteur sint occaecat cupidatat non</span>
+                <span>Free food and refreshments throughout the day</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>Exciting prizes and recognition for outstanding projects</span>
               </li>
             </ul>
           </>
         )
       },
       2: {
-        title: "Lorem Ipsum Setup",
-        content: (
-          <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Ipsum Process</h3>
-            
-            <ol className="space-y-3 text-tertiary list-decimal list-inside mb-6">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Consectetur adipiscing elit sed do</li>
-              <li>Eiusmod tempor incididunt ut labore</li>
-              <li>Dolore magna aliqua ut enim</li>
-            </ol>
-
-            <div className="bg-accent/10 border border-accent rounded-lg p-4 mb-6">
-              <div className="text-accent font-bold mb-2">📝 Lorem Ipsum</div>
-              <p className="text-tertiary mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-              <a 
-                href="#" 
-                className="bg-accent hover:bg-accent/80 text-background px-6 py-2 rounded-lg font-medium transition-colors inline-block"
-              >
-                Lorem Form
-              </a>
-            </div>
-
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Ipsum Bring</h3>
-            <ul className="space-y-2 text-tertiary">
-              <li className="flex items-start gap-3">
-                <span className="text-green-400">✓</span>
-                <span>Lorem ipsum dolor sit amet</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400">✓</span>
-                <span>Consectetur adipiscing elit</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400">✓</span>
-                <span>Sed do eiusmod tempor!</span>
-              </li>
-            </ul>
-          </>
-        )
-      },
-      3: {
         title: "Schedule & Important Info",
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Here&pos;s the detailed schedule for the event day and important reminders to ensure you have the best experience.
+              Here&pos;s the detailed schedule for Friday, September 5, 2025. The event runs from 9:15 AM to 4:30 PM with workshops, guest speaker, hacking time, and extended judging period.
             </p>
             
-            <h3 className="text-xl font-bold text-foreground mb-4">Event Schedule</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Event Schedule - Friday, September 5, 2025</h3>
             
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">9:15 AM</span>
                 <div>
                   <div className="text-foreground font-medium">Check-in & Welcome</div>
-                  <div className="text-tertiary text-sm">Registration and team formation</div>
+                  <div className="text-tertiary text-sm">Registration, team formation, and light refreshments</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">9:45 AM</span>
                 <div>
-                  <div className="text-foreground font-medium">Opening Ceremony</div>
-                  <div className="text-tertiary text-sm">Theme presentation and rules overview</div>
+                  <div className="text-foreground font-medium">Opening Ceremony & Guest Speaker (TBD)</div>
+                  <div className="text-tertiary text-sm">Theme presentation, rules overview, and keynote presentation</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">10:15 AM</span>
                 <div>
                   <div className="text-foreground font-medium">Hacking Begins!</div>
                   <div className="text-tertiary text-sm">Start building your projects</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">11:45 AM</span>
+                <div>
+                  <div className="text-foreground font-medium">Workshop 1 (TBD) - 15 minutes</div>
+                  <div className="text-tertiary text-sm">Quick technical workshop or demo</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
+                <span className="text-accent font-bold">12:00 PM</span>
                 <div>
                   <div className="text-foreground font-medium">Lunch Break</div>
                   <div className="text-tertiary text-sm">Food provided by SCE</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">1:00 PM</span>
                 <div>
-                  <div className="text-foreground font-medium">Workshop: TBD</div>
-                  <div className="text-tertiary text-sm">Optional workshop for beginners</div>
+                  <div className="text-foreground font-medium">Workshop 2 (TBD) - 15 minutes</div>
+                  <div className="text-tertiary text-sm">Quick technical workshop or demo</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">1:15 PM</span>
+                <div>
+                  <div className="text-foreground font-medium">Continued Hacking Time</div>
+                  <div className="text-tertiary text-sm">Focus time for project development</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
+                <span className="text-accent font-bold">3:00 PM</span>
                 <div>
                   <div className="text-foreground font-medium">Project Submissions Due</div>
-                  <div className="text-tertiary text-sm">Final deadline for submissions</div>
+                  <div className="text-tertiary text-sm">Final deadline for project submissions</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">TBD</span>
+                <span className="text-accent font-bold">3:15 PM</span>
                 <div>
-                  <div className="text-foreground font-medium">Presentations & Judging</div>
-                  <div className="text-tertiary text-sm">Showcase your projects</div>
+                  <div className="text-foreground font-medium">Project Presentations & Judging</div>
+                  <div className="text-tertiary text-sm">Teams present their projects (1 hour 15 minute judging period)</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
+                <span className="text-accent font-bold">4:30 PM</span>
+                <div>
+                  <div className="text-foreground font-medium">Award Ceremony & Closing</div>
+                  <div className="text-tertiary text-sm">Winners announcement and wrap-up</div>
                 </div>
               </div>
             </div>
             
             <div className="bg-red-900/20 border border-red-600 rounded-lg p-4">
-              <div className="text-red-400 font-bold mb-2">⚠ Lorem Ipsum</div>
+              <div className="text-red-400 font-bold mb-2">⚠ Important Reminders</div>
               <ul className="text-tertiary space-y-1">
-                <li>• Lorem ipsum dolor sit amet</li>
-                <li>• Consectetur adipiscing elit sed do</li>
-                <li>• Eiusmod tempor incididunt ut labore</li>
-                <li>• Dolore magna aliqua ut enim</li>
+                <li>• Bring your laptop, charger, and any development tools you need</li>
+                <li>• Team formation happens during check-in (1-4 people per team)</li>
+                <li>• Submissions must be made through the official platform by 3:00 PM</li>
+                <li>• All projects must be built within the hackathon timeframe</li>
               </ul>
             </div>
           </>
         )
       },
-      4: {
-        title: "Lorem Ipsum Guidelines",
+      3: {
+        title: "Submission Guidelines",
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Follow these guidelines to ensure your project is properly submitted and eligible for judging. All submissions must be completed by 3:00 PM on September 5, 2025.
             </p>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-6">
-              <div className="text-blue-400 font-bold mb-2">📋 Lorem Requirements</div>
-              <p className="text-tertiary">Lorem ipsum dolor sit amet consectetur. Adipiscing elit sed do eiusmod tempor.</p>
+              <div className="text-blue-400 font-bold mb-2">📋 Submission Requirements</div>
+              <p className="text-tertiary">All projects must include working code, documentation, and a demo video or live presentation.</p>
             </div>
             
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Components</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Required Components</h3>
             
             <ul className="space-y-3 text-tertiary mb-6">
               <li className="flex items-start gap-3">
                 <span className="text-green-400">✓</span>
-                <span><strong className="text-foreground">Lorem Ipsum:</strong> Dolor sit amet consectetur adipiscing</span>
+                <span><strong className="text-foreground">Source Code:</strong> Complete project repository with clean, documented code</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400">📹</span>
+                <span><strong className="text-foreground">Demo Video (Optional):</strong> 2-3 minute demonstration of your project&pos;s functionality</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400">✓</span>
-                <span><strong className="text-foreground">Dolor Sit:</strong> 2-3 lorem ipsum demonstration</span>
+                <span><strong className="text-foreground">README:</strong> Clear project description, setup instructions, and usage guide</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400">✓</span>
-                <span><strong className="text-foreground">Amet Consectetur:</strong> Lorem ipsum dolor explanation</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400">✓</span>
-                <span><strong className="text-foreground">Adipiscing Elit:</strong> Lorem ipsum team members</span>
+                <span><strong className="text-foreground">Team Info:</strong> List of all team members and their contributions</span>
               </li>
             </ul>
 
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Criteria</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-4 border border-secondary rounded-lg">
-                <h4 className="text-foreground font-medium mb-2">Lorem (25%)</h4>
-                <p className="text-tertiary text-sm">Ipsum dolor sit amet consectetur</p>
-              </div>
-              <div className="p-4 border border-secondary rounded-lg">
-                <h4 className="text-foreground font-medium mb-2">Ipsum (25%)</h4>
-                <p className="text-tertiary text-sm">Dolor sit amet consectetur adipiscing</p>
-              </div>
-              <div className="p-4 border border-secondary rounded-lg">
-                <h4 className="text-foreground font-medium mb-2">Dolor (25%)</h4>
-                <p className="text-tertiary text-sm">Sit amet consectetur adipiscing elit</p>
-              </div>
-              <div className="p-4 border border-secondary rounded-lg">
-                <h4 className="text-foreground font-medium mb-2">Amet (25%)</h4>
-                <p className="text-tertiary text-sm">Consectetur adipiscing elit sed do</p>
-              </div>
-            </div>
-          </>
-        )
-      },
-      5: {
-        title: "Lorem Ipsum Resources",
-        content: (
-          <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Ipsum Resources</h3>
-            
-            <div className="space-y-4 mb-6">
-              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
-                <div className="text-accent font-medium">Lorem Ipsum Documentation</div>
-                <div className="text-sm text-tertiary">Dolor sit amet consectetur adipiscing</div>
-              </a>
-              
-              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
-                <div className="text-accent font-medium">Consectetur Adipiscing</div>
-                <div className="text-sm text-tertiary">Elit sed do eiusmod tempor tutorials</div>
-              </a>
-              
-              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
-                <div className="text-accent font-medium">Incididunt Ut Labore</div>
-                <div className="text-sm text-tertiary">Dolore magna aliqua models</div>
-              </a>
-
-              <a href="#" className="block p-3 border border-secondary rounded-lg hover:bg-secondary/10 transition-colors">
-                <div className="text-accent font-medium">Enim Ad Minim</div>
-                <div className="text-sm text-tertiary">Veniam quis nostrud API</div>
-              </a>
-            </div>
-
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Tools</h3>
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
-              <div className="p-3 border border-secondary rounded-lg">
-                <div className="text-accent font-medium">Lorem Ipsum</div>
-                <div className="text-sm text-tertiary">Dolor sit amet consectetur</div>
-              </div>
-              <div className="p-3 border border-secondary rounded-lg">
-                <div className="text-accent font-medium">Adipiscing Elit</div>
-                <div className="text-sm text-tertiary">Sed do eiusmod tempor</div>
-              </div>
-              <div className="p-3 border border-secondary rounded-lg">
-                <div className="text-accent font-medium">Incididunt Ut</div>
-                <div className="text-sm text-tertiary">Labore et dolore magna</div>
-              </div>
-              <div className="p-3 border border-secondary rounded-lg">
-                <div className="text-accent font-medium">Aliqua Enim</div>
-                <div className="text-sm text-tertiary">Ad minim veniam quis</div>
-              </div>
-            </div>
-
-            <h3 className="text-xl font-bold text-foreground mb-4">Lorem Help?</h3>
             <div className="bg-accent/10 border border-accent rounded-lg p-4">
-              <p className="text-tertiary mb-3">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do!</p>
-              <div className="flex flex-wrap gap-3">
-                <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Lorem Support</span>
-                <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Ipsum Mentors</span>
-                <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Dolor Workshops</span>
+              <div className="text-accent font-bold mb-2">📝 Submission Platform</div>
+              <p className="text-tertiary mb-4">Submit your project through our official hackathon platform. Link will be provided during the event.</p>
+              <div className="text-sm text-tertiary">
+                <strong>Deadline:</strong> September 5, 2025 at 3:00 PM PT
               </div>
             </div>
           </>
@@ -388,14 +291,14 @@ export default function Fall2025Hackathon() {
               FALL HACKATHON
             </h1>
             <div className="text-2xl md:text-3xl text-accent font-medium">
-              September 13, 2025 - Time TBD
+              September 5, 2025 • 9:15 AM - 4:30 PM PT
             </div>
             <div className="text-lg md:text-xl text-tertiary mt-2">
-              Location TBD
+              MLK Library Room 225
             </div>
             {countdownPhase === 'submission' && (
               <div className="text-lg md:text-xl text-red-400 mt-2 font-semibold">
-                ⏰ PROJECT SUBMISSIONS DUE TIME TBD
+                ⏰ PROJECT SUBMISSIONS DUE 3:00 PM PT
               </div>
             )}
           </div>
@@ -403,14 +306,11 @@ export default function Fall2025Hackathon() {
           {/* Event Info */}
           <div className="mb-20">
             <div className="text-center">
-              <div className="text-xl md:text-2xl text-tertiary font-medium mb-6">
-                SCHEDULE AND LOCATION DETAILS
-              </div>
               <div className="text-3xl md:text-4xl font-bold text-foreground tracking-widest mb-4">
-                TO BE DETERMINED
+                SEPTEMBER 5, 2025
               </div>
-              <div className="text-lg text-tertiary">
-                Stay tuned for updates on timing and venue information!
+              <div className="text-lg text-tertiary mb-4">
+                9:15 AM - 4:30 PM Pacific Time
               </div>
             </div>
           </div>
@@ -434,7 +334,7 @@ export default function Fall2025Hackathon() {
                         : 'text-tertiary hover:text-foreground'
                     }`}
                   >
-                    1. LOREM
+                    1. INTRODUCTION
                   </button>
                   <button 
                     onClick={() => setActiveSection(2)}
@@ -444,7 +344,7 @@ export default function Fall2025Hackathon() {
                         : 'text-tertiary hover:text-foreground'
                     }`}
                   >
-                    2. IPSUM
+                    2. SCHEDULE
                   </button>
                   <button 
                     onClick={() => setActiveSection(3)}
@@ -454,27 +354,7 @@ export default function Fall2025Hackathon() {
                         : 'text-tertiary hover:text-foreground'
                     }`}
                   >
-                    3. SCHEDULE
-                  </button>
-                  <button 
-                    onClick={() => setActiveSection(4)}
-                    className={`w-full text-left text-lg font-bold transition-colors ${
-                      activeSection === 4 
-                        ? 'text-foreground border-b border-secondary pb-2' 
-                        : 'text-tertiary hover:text-foreground'
-                    }`}
-                  >
-                    4. DOLOR
-                  </button>
-                  <button 
-                    onClick={() => setActiveSection(5)}
-                    className={`w-full text-left text-lg font-bold transition-colors ${
-                      activeSection === 5 
-                        ? 'text-foreground border-b border-secondary pb-2' 
-                        : 'text-tertiary hover:text-foreground'
-                    }`}
-                  >
-                    5. SIT
+                    3. SUBMISSION
                   </button>
                 </nav>
               </div>

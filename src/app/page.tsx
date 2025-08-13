@@ -22,11 +22,11 @@ const hackathons = {
     {
       id: 1,
       name: "Fall 2025 Hackathon",
-      date: "September 13, 2025",
-      startTime: "TBD",
-      endTime: "TBD",
-      duration: "TBD",
-      location: "TBD",
+      date: "September 5, 2025",
+      startTime: "9:00 AM",
+      endTime: "5:00 PM",
+      duration: "6 hours",
+      location: "MLK Library Room 225",
       status: "upcoming",
       url: "/hackathons/fall-2025"
     }
