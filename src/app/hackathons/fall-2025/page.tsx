@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Fall2025Hackathon() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -65,7 +66,7 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Join us for the <strong className="text-foreground">Fall 2025 Hackathon</strong> - a day of innovation, creativity, and collaborative coding! Whether you're a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
+              Join us for the <strong className="text-foreground">Fall 2025 Hackathon</strong> - a day of innovation, creativity, and collaborative coding! Whether you&apos;re a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
             </p>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3">
@@ -89,7 +90,7 @@ export default function Fall2025Hackathon() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Two hands-on technical workshops to boost your skills</span>
+                <span>Two optional 30-minute technical workshops you can attend</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
@@ -140,31 +141,10 @@ export default function Fall2025Hackathon() {
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">11:45 AM</span>
-                <div>
-                  <div className="text-foreground font-medium">Workshop 1 (TBD) - 15 minutes</div>
-                  <div className="text-tertiary text-sm">Quick technical workshop or demo</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
                 <span className="text-accent font-bold">12:00 PM</span>
                 <div>
                   <div className="text-foreground font-medium">Lunch Break</div>
                   <div className="text-tertiary text-sm">Food provided by SCE</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">1:00 PM</span>
-                <div>
-                  <div className="text-foreground font-medium">Workshop 2 (TBD) - 15 minutes</div>
-                  <div className="text-tertiary text-sm">Quick technical workshop or demo</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">1:15 PM</span>
-                <div>
-                  <div className="text-foreground font-medium">Continued Hacking Time</div>
-                  <div className="text-tertiary text-sm">Focus time for project development</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
@@ -188,6 +168,40 @@ export default function Fall2025Hackathon() {
                   <div className="text-tertiary text-sm">Winners announcement and wrap-up</div>
                 </div>
               </div>
+            </div>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4 mt-8">Optional Workshops</h3>
+            
+            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-6">
+              <div className="text-blue-400 font-bold mb-2">📚 Workshops Available</div>
+              <p className="text-tertiary">Two optional 30-minute workshops will be available during the event. You can attend either, both, or neither - it&apos;s completely up to you and your team&apos;s needs!</p>
+            </div>
+            
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start gap-4 p-3 bg-green-900/20 border border-green-600 rounded-lg">
+                <span className="text-green-400 font-bold">Workshop 1</span>
+                <div>
+                  <div className="text-foreground font-medium">Topic TBD - 30 minutes</div>
+                  <div className="text-tertiary text-sm">Optional technical workshop - details coming soon</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-3 bg-green-900/20 border border-green-600 rounded-lg">
+                <span className="text-green-400 font-bold">Workshop 2</span>
+                <div>
+                  <div className="text-foreground font-medium">Topic TBD - 30 minutes</div>
+                  <div className="text-tertiary text-sm">Optional technical workshop - details coming soon</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4 mb-6">
+              <div className="text-yellow-400 font-bold mb-2">💡 Workshop Tips</div>
+              <ul className="text-tertiary space-y-1">
+                <li>• Workshops are completely optional - focus on your project if you prefer</li>
+                <li>• Each workshop is 30 minutes long with practical content</li>
+                <li>• You can attend one, both, or skip them entirely</li>
+                <li>• Workshop times and topics will be announced closer to the event</li>
+              </ul>
             </div>
             
             <div className="bg-red-900/20 border border-red-600 rounded-lg p-4">
@@ -269,7 +283,13 @@ export default function Fall2025Hackathon() {
               <div className="text-sm text-tertiary">San José State University</div>
             </div>
           </Link>
-          <div className="ml-auto">
+          <div className="ml-auto flex items-center gap-4">
+            <Link 
+              href="/hackathons/fall-2025/timer"
+              className="text-accent hover:text-accent/80 font-medium transition-colors"
+            >
+              ⏰ Live Timer
+            </Link>
             <Link 
               href="/"
               className="text-accent hover:text-accent/80 font-medium transition-colors"

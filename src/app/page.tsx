@@ -14,6 +14,7 @@ type Hackathon = {
   location: string;
   status: "upcoming" | "current" | "completed";
   url?: string;
+  timerUrl?: string;
 };
 
 // Sample hackathon data - replace with actual data from your backend
@@ -28,7 +29,8 @@ const hackathons = {
       duration: "6 hours",
       location: "MLK Library Room 225",
       status: "upcoming",
-      url: "/hackathons/fall-2025"
+      url: "/hackathons/fall-2025",
+      timerUrl: "/hackathons/fall-2025/timer"
     }
   ] as Hackathon[],
   current: [
@@ -161,7 +163,7 @@ function HackathonCard({ hackathon }: { hackathon: Hackathon }) {
   };
 
   return (
-    <Link href={hackathon.url || "#"} className={hackathon.url ? "cursor-pointer" : "cursor-default"}>
+    <div className="cursor-default">
       <Card className="bg-background border-secondary hover:border-accent transition-colors h-full">
         <CardHeader>
           <div className="flex items-start justify-between">
@@ -186,13 +188,28 @@ function HackathonCard({ hackathon }: { hackathon: Hackathon }) {
             <span className="text-accent">📍</span>
             <span>{hackathon.location}</span>
           </div>
-          {hackathon.url && (
-            <div className="pt-2 text-accent text-sm font-medium">
-              Click to view details →
-            </div>
-          )}
+          
+          {/* Action Links */}
+          <div className="pt-4 space-y-2">
+            {hackathon.url && (
+              <Link 
+                href={hackathon.url}
+                className="block text-accent hover:text-accent/80 text-sm font-medium transition-colors"
+              >
+                View Details →
+              </Link>
+            )}
+            {hackathon.timerUrl && (
+              <Link 
+                href={hackathon.timerUrl}
+                className="block text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+              >
+                ⏰ Live Timer →
+              </Link>
+            )}
+          </div>
         </CardContent>
       </Card>
-    </Link>
+    </div>
   );
 }
