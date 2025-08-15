@@ -113,7 +113,7 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Here&pos;s the detailed schedule for Friday, September 5, 2025. The event runs from 9:15 AM to 4:30 PM with workshops, guest speaker, hacking time, and extended judging period.
+              Here&apos;s the detailed schedule for Friday, September 5, 2025. The event runs from 9:15 AM to 4:30 PM with workshops, guest speaker, hacking time, and extended judging period.
             </p>
             
             <h3 className="text-xl font-bold text-foreground mb-4">Event Schedule - Friday, September 5, 2025</h3>
