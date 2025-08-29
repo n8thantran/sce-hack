@@ -69,7 +69,7 @@ export default function Fall2025Hackathon() {
               Join us for <strong className="text-foreground">SCE Hacks 1.0 w/ <span style={{ color: '#18e299' }}>Mintlify</span></strong> - a day of innovation, creativity, and collaborative coding! Whether you&apos;re a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
             </p>
             
-            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3">
+            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3 border-glow">
               <div className="text-blue-400 text-xl">🏆</div>
               <div>
                 <span className="text-foreground font-medium">Prizes: </span>
@@ -77,7 +77,7 @@ export default function Fall2025Hackathon() {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-foreground mb-4">What to Expect</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4 text-glow-accent">What to Expect</h3>
             
             <ul className="space-y-3 text-tertiary">
               <li className="flex items-start gap-3">
@@ -284,10 +284,10 @@ export default function Fall2025Hackathon() {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-foreground mb-4">Hackathon Tips</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4 text-glow-accent">Hackathon Tips</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4">
+              <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 border-glow">
                 <div className="text-blue-400 font-bold mb-2">💡 Project Planning</div>
                 <ul className="text-tertiary space-y-1 text-sm">
                   <li>• Start simple and iterate</li>
@@ -297,7 +297,7 @@ export default function Fall2025Hackathon() {
                 </ul>
               </div>
               
-              <div className="bg-green-900/20 border border-green-600 rounded-lg p-4">
+              <div className="bg-green-900/20 border border-green-600 rounded-lg p-4 border-glow">
                 <div className="text-green-400 font-bold mb-2">👥 Team Strategy</div>
                 <ul className="text-tertiary space-y-1 text-sm">
                   <li>• Divide tasks based on strengths</li>
@@ -307,7 +307,7 @@ export default function Fall2025Hackathon() {
                 </ul>
               </div>
               
-              <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4">
+              <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4 border-glow">
                 <div className="text-yellow-400 font-bold mb-2">🏆 Winning Tips</div>
                 <ul className="text-tertiary space-y-1 text-sm">
                   <li>• Tell a compelling story</li>
@@ -317,7 +317,7 @@ export default function Fall2025Hackathon() {
                 </ul>
               </div>
               
-              <div className="bg-purple-900/20 border border-purple-600 rounded-lg p-4">
+              <div className="bg-purple-900/20 border border-purple-600 rounded-lg p-4 border-glow">
                 <div className="text-purple-400 font-bold mb-2">⚡ Technical Tips</div>
                 <ul className="text-tertiary space-y-1 text-sm">
                   <li>• Use familiar technologies</li>
@@ -380,7 +380,7 @@ export default function Fall2025Hackathon() {
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4 tracking-tight">
               SCE HACKS 1.0
             </h1>
-            <div className="text-2xl md:text-3xl text-accent font-medium">
+            <div className="text-2xl md:text-3xl text-accent font-medium text-glow-accent">
               w/ <span style={{ color: '#18e299' }}>Mintlify</span>
             </div>
             <div className="text-xl md:text-2xl text-tertiary mt-4">
@@ -417,14 +417,14 @@ export default function Fall2025Hackathon() {
             
             {/* Left Sidebar Navigation */}
             <div className="lg:col-span-3">
-              <div className="bg-background border border-secondary rounded-lg p-6">
+              <div className="bg-background border border-secondary rounded-lg p-6 border-glow">
                 <nav className="space-y-4">
                   <button 
                     onClick={() => setActiveSection(1)}
                     className={`w-full text-left text-lg font-bold pb-2 transition-colors cursor-pointer ${
                       activeSection === 1 
-                        ? 'text-foreground border-b border-secondary' 
-                        : 'text-tertiary hover:text-foreground'
+                        ? 'text-accent border-b border-accent text-glow-accent' 
+                        : 'text-tertiary hover:text-accent'
                     }`}
                   >
                     1. INTRODUCTION
@@ -433,8 +433,8 @@ export default function Fall2025Hackathon() {
                     onClick={() => setActiveSection(2)}
                     className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
                       activeSection === 2 
-                        ? 'text-foreground border-b border-secondary pb-2' 
-                        : 'text-tertiary hover:text-foreground'
+                        ? 'text-accent border-b border-accent pb-2 text-glow-accent' 
+                        : 'text-tertiary hover:text-accent'
                     }`}
                   >
                     2. SCHEDULE
@@ -443,8 +443,8 @@ export default function Fall2025Hackathon() {
                     onClick={() => setActiveSection(3)}
                     className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
                       activeSection === 3 
-                        ? 'text-foreground border-b border-secondary pb-2' 
-                        : 'text-tertiary hover:text-foreground'
+                        ? 'text-accent border-b border-accent pb-2 text-glow-accent' 
+                        : 'text-tertiary hover:text-accent'
                     }`}
                   >
                     3. SUBMISSION
@@ -453,8 +453,8 @@ export default function Fall2025Hackathon() {
                     onClick={() => setActiveSection(4)}
                     className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
                       activeSection === 4 
-                        ? 'text-foreground border-b border-secondary pb-2' 
-                        : 'text-tertiary hover:text-foreground'
+                        ? 'text-accent border-b border-accent pb-2 text-glow-accent' 
+                        : 'text-tertiary hover:text-accent'
                     }`}
                   >
                     4. TIPS & PRIZES
@@ -465,10 +465,10 @@ export default function Fall2025Hackathon() {
             
             {/* Main Content Area */}
             <div className="lg:col-span-9">
-              <div className="bg-background border border-secondary rounded-lg p-8">
+              <div className="bg-background border border-secondary rounded-lg p-8 border-glow">
                 
                 {/* Dynamic Content Based on Active Section */}
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-glow-accent">
                   {getSectionContent(activeSection).title}
                 </h2>
                 

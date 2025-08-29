@@ -3,10 +3,11 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --accent: #2563eb;
-  --secondary: #374151;
-  --tertiary: #6b7280;
+  --accent: #00a8ff; /* Brighter blue */
+  --secondary: #1a1a1a; /* Darker gray */
+  --tertiary: #888888; /* Lighter gray */
   --nvidia-green: #76b900;
+  --hacker-green: #00ff00;
 }
 
 /* Remove dark mode media query since we're using black theme by default */
@@ -14,7 +15,27 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Scanline effect */
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
 }
 
 /* Marquee animation */
@@ -47,6 +68,93 @@ body {
 /* Custom utilities for straight lines */
 .tracking-widest {
   letter-spacing: 0.3em;
+}
+
+/* New "hackery" styles */
+.text-glow {
+  text-shadow: 0 0 4px currentColor;
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
+}
+
+.text-glow-green {
+  color: var(--hacker-green);
+  text-shadow: 0 0 5px var(--hacker-green);
+}
+
+.border-glow {
+    box-shadow: 0 0 3px rgba(0, 168, 255, 0.5), 0 0 6px rgba(0, 168, 255, 0.3);
+}
+
+@keyframes glitch {
+  2%,64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg);
+  }
+}
+
+@keyframes glitch-top {
+  2%,64% {
+    transform: translate(2px,-2px);
+  }
+  4%,60% {
+    transform: translate(-2px,2px);
+  }
+  62% {
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+@keyframes glitch-bottom {
+  2%,64% {
+    transform: translate(-2px,0);
+  }
+  4%,60% {
+    transform: translate(-2px,0);
+  }
+  62% {
+    transform: translate(-22px,5px) skew(21deg);
+  }
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 1s linear infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--hacker-green);
+  animation: glitch-top 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--accent), 2px 2px var(--hacker-green);
+  animation: glitch-bottom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
 /* Custom color classes */
