@@ -66,7 +66,7 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Join us for <strong className="text-foreground">SCE Hacks 1.0 w/ <span style={{ color: '#18e299' }}>Mintlify</span></strong> - a day of innovation, creativity, and collaborative coding! Whether you&apos;re a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
+              Join us for <strong className="text-foreground">SCE Hacks 1.0 w/ <span style={{ color: '#18e299' }}>Mintlify</span></strong> - a day of innovation, creativity, and collaborative coding! Whether it&apos;s your first hackathon or your 10th, this event is designed to challenge your skills and expand your network.
             </p>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3 border-glow">
