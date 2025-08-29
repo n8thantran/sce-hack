@@ -29,12 +29,12 @@ export default function Fall2025TimerPage() {
         // Before hackathon starts
         targetDate = hackathonDate;
         phase = 'before';
-        text = 'Until SCE Hacks 1.0 w/ Mintlify Begins';
+        text = 'Time until SCE Hacks 1.0 w/ Mintlify Begins';
       } else if (now < hackingStartTime.getTime()) {
         // Hackathon started but hacking hasn't begun yet (opening ceremony, etc.)
         targetDate = hackingStartTime;
         phase = 'before-hacking';
-        text = 'Until Hacking Time Begins';
+        text = 'Time until Hacking Time Begins';
       } else if (now < hackingEndTime.getTime()) {
         // Currently in hacking time
         targetDate = hackingEndTime;
