@@ -198,11 +198,11 @@ function HackathonCard({ hackathon }: { hackathon: Hackathon }) {
             <span className="text-accent">📍</span>
             <span>{hackathon.location}</span>
           </div>
-          
+
           {/* Action Links */}
           <div className="pt-4 space-y-2">
             {hackathon.url && (
-              <Link 
+              <Link
                 href={hackathon.url}
                 className="block text-accent hover:text-accent/80 text-sm font-medium transition-colors"
               >
@@ -210,7 +210,7 @@ function HackathonCard({ hackathon }: { hackathon: Hackathon }) {
               </Link>
             )}
             {hackathon.timerUrl && (
-              <Link 
+              <Link
                 href={hackathon.timerUrl}
                 className="block text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
               >

@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SCE Hackathons",
   description: "SCE Hackathon :D",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
