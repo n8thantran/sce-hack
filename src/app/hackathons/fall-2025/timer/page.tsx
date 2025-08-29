@@ -136,7 +136,15 @@ export default function Fall2025TimerPage() {
         <div className="text-center max-w-4xl mx-auto">
           {/* Phase Text */}
           <div className={`text-2xl md:text-3xl font-bold mb-8 ${getPhaseColor()}`}>
-            {phaseText}
+            {phaseText.includes('Mintlify') ? (
+              <>
+                {phaseText.split('Mintlify')[0]}
+                <span style={{ color: '#18e299' }}>Mintlify</span>
+                {phaseText.split('Mintlify')[1]}
+              </>
+            ) : (
+              phaseText
+            )}
           </div>
 
           {/* Event Title */}
@@ -144,7 +152,7 @@ export default function Fall2025TimerPage() {
             SCE HACKS 1.0
           </h1>
           <div className="text-2xl md:text-3xl text-accent font-medium mb-8">
-            w/ Mintlify
+            w/ <span style={{ color: '#18e299' }}>Mintlify</span>
           </div>
 
           {/* Event Details */}

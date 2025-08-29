@@ -167,7 +167,17 @@ function HackathonCard({ hackathon }: { hackathon: Hackathon }) {
       <Card className="bg-background border-secondary hover:border-accent transition-colors h-full">
         <CardHeader>
           <div className="flex items-start justify-between">
-            <CardTitle className="text-foreground text-lg">{hackathon.name}</CardTitle>
+            <CardTitle className="text-foreground text-lg">
+              {hackathon.name.includes('Mintlify') ? (
+                <>
+                  {hackathon.name.split('Mintlify')[0]}
+                  <span style={{ color: '#18e299' }}>Mintlify</span>
+                  {hackathon.name.split('Mintlify')[1]}
+                </>
+              ) : (
+                hackathon.name
+              )}
+            </CardTitle>
             {getStatusBadge(hackathon.status)}
           </div>
         </CardHeader>

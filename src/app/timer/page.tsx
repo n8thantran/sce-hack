@@ -136,12 +136,20 @@ export default function TimerPage() {
         <div className="text-center max-w-4xl mx-auto">
           {/* Phase Text */}
           <div className={`text-2xl md:text-3xl font-bold mb-8 ${getPhaseColor()}`}>
-            {phaseText}
+            {phaseText.includes('Mintlify') ? (
+              <>
+                {phaseText.split('Mintlify')[0]}
+                <span style={{ color: '#18e299' }}>Mintlify</span>
+                {phaseText.split('Mintlify')[1]}
+              </>
+            ) : (
+              phaseText
+            )}
           </div>
 
           {/* Event Title */}
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
-            SCE Hacks 1.0 w/ Mintlify
+            SCE Hacks 1.0 w/ <span style={{ color: '#18e299' }}>Mintlify</span>
           </h1>
 
           {/* Event Details */}
