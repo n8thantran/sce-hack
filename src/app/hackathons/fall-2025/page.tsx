@@ -137,7 +137,7 @@ export default function Fall2025Hackathon() {
                 <span className="text-accent font-bold">9:30 – 10:00 AM</span>
                 <div>
                   <div className="text-foreground font-medium">Fireside Chat</div>
-                  <div className="text-tertiary text-sm">Hosted by Ryan + Hanhbee</div>
+                  <div className="text-tertiary text-sm">Hosted by Ryan + Hahnbee</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
