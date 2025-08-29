@@ -15,8 +15,8 @@ export default function Fall2025TimerPage() {
   const [phaseText, setPhaseText] = useState('');
 
   useEffect(() => {
-    const hackathonDate = new Date("2025-09-05T09:15:00-07:00"); // September 5, 2025 at 9:15 AM PT
-    const hackingStartTime = new Date("2025-09-05T10:15:00-07:00"); // Hacking starts at 10:15 AM PT
+    const hackathonDate = new Date("2025-09-05T09:00:00-07:00"); // September 5, 2025 at 9:00 AM PT
+    const hackingStartTime = new Date("2025-09-05T10:00:00-07:00"); // Hacking starts at 10:00 AM PT
     const hackingEndTime = new Date("2025-09-05T15:00:00-07:00"); // Hacking ends at 3:00 PM PT (submission deadline)
     
     const timer = setInterval(() => {
@@ -29,7 +29,7 @@ export default function Fall2025TimerPage() {
         // Before hackathon starts
         targetDate = hackathonDate;
         phase = 'before';
-        text = 'Until Fall 2025 Hackathon Begins';
+        text = 'Until SCE Hacks 1.0 w/ Mintlify Begins';
       } else if (now < hackingStartTime.getTime()) {
         // Hackathon started but hacking hasn't begun yet (opening ceremony, etc.)
         targetDate = hackingStartTime;
@@ -44,7 +44,7 @@ export default function Fall2025TimerPage() {
         // Hackathon has ended
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setCurrentPhase('ended');
-        setPhaseText('Fall 2025 Hackathon Has Ended');
+        setPhaseText('SCE Hacks 1.0 w/ Mintlify Has Ended');
         return;
       }
       
@@ -140,14 +140,17 @@ export default function Fall2025TimerPage() {
           </div>
 
           {/* Event Title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
-            FALL 2025 HACKATHON
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
+            SCE HACKS 1.0
           </h1>
+          <div className="text-2xl md:text-3xl text-accent font-medium mb-8">
+            w/ Mintlify
+          </div>
 
           {/* Event Details */}
           <div className="text-lg md:text-xl text-tertiary mb-12">
             <div>September 5, 2025</div>
-            <div>9:15 AM - 4:30 PM PT</div>
+            <div>9:00 AM - 4:45 PM PT</div>
             <div>MLK Library Room 225</div>
           </div>
 

@@ -66,14 +66,14 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Join us for the <strong className="text-foreground">Fall 2025 Hackathon</strong> - a day of innovation, creativity, and collaborative coding! Whether you&apos;re a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
+              Join us for <strong className="text-foreground">SCE Hacks 1.0 w/ Mintlify</strong> - a day of innovation, creativity, and collaborative coding! Whether you&apos;re a seasoned developer or just starting your programming journey, this event is designed to challenge your skills and expand your network.
             </p>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-8 flex items-start gap-3">
               <div className="text-blue-400 text-xl">🏆</div>
               <div>
                 <span className="text-foreground font-medium">Prizes: </span>
-                <span className="text-foreground">TBD - Exciting prizes to be announced soon!</span>
+                <span className="text-foreground">$2,000 total prize pool across 4 categories!</span>
               </div>
             </div>
             
@@ -82,15 +82,15 @@ export default function Fall2025Hackathon() {
             <ul className="space-y-3 text-tertiary">
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>6 hours of focused coding and development time</span>
+                <span>5 hours of focused coding and development time</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Guest speaker presentation and industry insights</span>
+                <span>Fireside chat with industry professionals</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Two optional 30-minute technical workshops you can attend</span>
+                <span>Optional Hackathon 101 workshop for beginners</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
@@ -98,7 +98,7 @@ export default function Fall2025Hackathon() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
-                <span>Free food and refreshments throughout the day</span>
+                <span>Breakfast and refreshments provided</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
@@ -113,58 +113,65 @@ export default function Fall2025Hackathon() {
         content: (
           <>
             <p className="text-lg text-tertiary mb-6 leading-relaxed">
-              Here&apos;s the detailed schedule for Friday, September 5, 2025. The event runs from 9:15 AM to 4:30 PM with workshops, guest speaker, hacking time, and extended judging period.
+              Here&apos;s the detailed schedule for Friday, September 5, 2025. The event runs from 9:00 AM to 4:45 PM with check-in, fireside chat, hacking time, judging, and closing ceremony.
             </p>
             
             <h3 className="text-xl font-bold text-foreground mb-4">Event Schedule - Friday, September 5, 2025</h3>
             
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">9:15 AM</span>
+                <span className="text-accent font-bold">9:00 – 9:20 AM</span>
                 <div>
-                  <div className="text-foreground font-medium">Check-in & Welcome</div>
-                  <div className="text-tertiary text-sm">Registration, team formation, and light refreshments</div>
+                  <div className="text-foreground font-medium">Hacker check-in & breakfast</div>
+                  <div className="text-tertiary text-sm">Croissants, seating - check-in closes promptly at 9:30 AM</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">9:45 AM</span>
+                <span className="text-accent font-bold">9:20 – 9:30 AM</span>
                 <div>
-                  <div className="text-foreground font-medium">Opening Ceremony & Guest Speaker (TBD)</div>
-                  <div className="text-tertiary text-sm">Theme presentation, rules overview, and keynote presentation</div>
+                  <div className="text-foreground font-medium">Opening Ceremony</div>
+                  <div className="text-tertiary text-sm">President Introduction, SCE GLAZE, Mizan + Ryan yap</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">10:15 AM</span>
+                <span className="text-accent font-bold">9:30 – 10:00 AM</span>
                 <div>
-                  <div className="text-foreground font-medium">Hacking Begins!</div>
-                  <div className="text-tertiary text-sm">Start building your projects</div>
+                  <div className="text-foreground font-medium">Fireside Chat</div>
+                  <div className="text-tertiary text-sm">Hosted by Ryan + Hanhbee</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">12:00 PM</span>
+                <span className="text-accent font-bold">10:00 AM</span>
                 <div>
-                  <div className="text-foreground font-medium">Lunch Break</div>
-                  <div className="text-tertiary text-sm">Food provided by SCE</div>
+                  <div className="text-foreground font-medium">Hacking officially begins</div>
+                  <div className="text-tertiary text-sm">Ryan + Mizan Announce</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
+                <span className="text-accent font-bold">10:00 – 10:30 AM</span>
+                <div>
+                  <div className="text-foreground font-medium">Optional Workshop</div>
+                  <div className="text-tertiary text-sm">TBD</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
                 <span className="text-accent font-bold">3:00 PM</span>
                 <div>
-                  <div className="text-foreground font-medium">Project Submissions Due</div>
+                  <div className="text-foreground font-medium">Hacking ends; judging begins</div>
                   <div className="text-tertiary text-sm">Final deadline for project submissions</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">3:15 PM</span>
+                <span className="text-accent font-bold">4:00 PM</span>
                 <div>
-                  <div className="text-foreground font-medium">Project Presentations & Judging</div>
-                  <div className="text-tertiary text-sm">Teams present their projects (1 hour 15 minute judging period)</div>
+                  <div className="text-foreground font-medium">Judging concludes</div>
+                  <div className="text-tertiary text-sm">All project evaluations completed</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">4:30 PM</span>
+                <span className="text-accent font-bold">4:00 – 4:45 PM</span>
                 <div>
-                  <div className="text-foreground font-medium">Award Ceremony & Closing</div>
+                  <div className="text-foreground font-medium">Closing Ceremony</div>
                   <div className="text-tertiary text-sm">Winners announcement and wrap-up</div>
                 </div>
               </div>
@@ -173,42 +180,15 @@ export default function Fall2025Hackathon() {
             <h3 className="text-xl font-bold text-foreground mb-4 mt-8">Optional Workshops</h3>
             
             <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-6">
-              <div className="text-blue-400 font-bold mb-2">📚 Workshops Available</div>
-              <p className="text-tertiary">Two optional 30-minute workshops will be available during the event. You can attend either, both, or neither - it&apos;s completely up to you and your team&apos;s needs!</p>
-            </div>
-            
-            <div className="space-y-4 mb-6">
-              <div className="flex items-start gap-4 p-3 bg-green-900/20 border border-green-600 rounded-lg">
-                <span className="text-green-400 font-bold">Workshop 1</span>
-                <div>
-                  <div className="text-foreground font-medium">Topic TBD - 30 minutes</div>
-                  <div className="text-tertiary text-sm">Optional technical workshop - details coming soon</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-3 bg-green-900/20 border border-green-600 rounded-lg">
-                <span className="text-green-400 font-bold">Workshop 2</span>
-                <div>
-                  <div className="text-foreground font-medium">Topic TBD - 30 minutes</div>
-                  <div className="text-tertiary text-sm">Optional technical workshop - details coming soon</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4 mb-6">
-              <div className="text-yellow-400 font-bold mb-2">💡 Workshop Tips</div>
-              <ul className="text-tertiary space-y-1">
-                <li>• Workshops are completely optional - focus on your project if you prefer</li>
-                <li>• Each workshop is 30 minutes long with practical content</li>
-                <li>• You can attend one, both, or skip them entirely</li>
-                <li>• Workshop times and topics will be announced closer to the event</li>
-              </ul>
+              <div className="text-blue-400 font-bold mb-2">📚 Optional Workshop Available</div>
+              <p className="text-tertiary">One optional workshop will be available during the event from 10:00 - 10:30 AM. You can attend or skip it - it&apos;s completely up to you and your team&apos;s needs!</p>
             </div>
             
             <div className="bg-red-900/20 border border-red-600 rounded-lg p-4">
               <div className="text-red-400 font-bold mb-2">⚠ Important Reminders</div>
               <ul className="text-tertiary space-y-1">
                 <li>• Bring your laptop, charger, and any development tools you need</li>
-                <li>• Team formation happens during check-in (1-4 people per team)</li>
+                <li>• Team formation happens during check-in (2-4 people per team)</li>
                 <li>• Submissions must be made through the official platform by 3:00 PM</li>
                 <li>• All projects must be built within the hackathon timeframe</li>
               </ul>
@@ -255,6 +235,96 @@ export default function Fall2025Hackathon() {
               <p className="text-tertiary mb-4">Submit your project through our official hackathon platform. Link will be provided during the event.</p>
               <div className="text-sm text-tertiary">
                 <strong>Deadline:</strong> September 5, 2025 at 3:00 PM PT
+              </div>
+            </div>
+          </>
+        )
+      },
+      4: {
+        title: "Tips & Prizes",
+        content: (
+          <>
+            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+              Get ready to compete for amazing prizes! Here are the prize tracks and some helpful tips to maximize your chances of success.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Prize Tracks</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-yellow-900/30 to-yellow-800/20 border border-yellow-600 rounded-lg">
+                <div>
+                  <div className="text-foreground font-bold text-lg">🏆 Best Overall</div>
+                  <div className="text-tertiary text-sm">Most impressive project across all criteria</div>
+                </div>
+                <div className="text-yellow-400 font-bold text-2xl">$800</div>
+              </div>
+              
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-900/30 to-green-800/20 border border-green-600 rounded-lg">
+                <div>
+                  <div className="text-foreground font-bold text-lg">🚀 Most Likely to be a Startup</div>
+                  <div className="text-tertiary text-sm">Project with the highest commercial potential</div>
+                </div>
+                <div className="text-green-400 font-bold text-2xl">$500</div>
+              </div>
+              
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-900/30 to-blue-800/20 border border-blue-600 rounded-lg">
+                <div>
+                  <div className="text-foreground font-bold text-lg">🎨 Best UI/UX</div>
+                  <div className="text-tertiary text-sm">Most intuitive and visually appealing design</div>
+                </div>
+                <div className="text-blue-400 font-bold text-2xl">$500</div>
+              </div>
+              
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-purple-900/30 to-purple-800/20 border border-purple-600 rounded-lg">
+                <div>
+                  <div className="text-foreground font-bold text-lg">😄 Most Useless</div>
+                  <div className="text-tertiary text-sm">Hilariously impractical but well-executed project</div>
+                </div>
+                <div className="text-purple-400 font-bold text-2xl">$200</div>
+              </div>
+            </div>
+            
+            <h3 className="text-xl font-bold text-foreground mb-4">Hackathon Tips</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4">
+                <div className="text-blue-400 font-bold mb-2">💡 Project Planning</div>
+                <ul className="text-tertiary space-y-1 text-sm">
+                  <li>• Start simple and iterate</li>
+                  <li>• Focus on core functionality first</li>
+                  <li>• Plan your MVP within 3-4 hours</li>
+                  <li>• Save time for testing and presentation prep</li>
+                </ul>
+              </div>
+              
+              <div className="bg-green-900/20 border border-green-600 rounded-lg p-4">
+                <div className="text-green-400 font-bold mb-2">👥 Team Strategy</div>
+                <ul className="text-tertiary space-y-1 text-sm">
+                  <li>• Divide tasks based on strengths</li>
+                  <li>• Communicate frequently</li>
+                  <li>• Use version control (Git)</li>
+                  <li>• Set regular check-in times</li>
+                </ul>
+              </div>
+              
+              <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-4">
+                <div className="text-yellow-400 font-bold mb-2">🏆 Winning Tips</div>
+                <ul className="text-tertiary space-y-1 text-sm">
+                  <li>• Tell a compelling story</li>
+                  <li>• Demo, don&apos;t just show code</li>
+                  <li>• Highlight unique features</li>
+                  <li>• Practice your presentation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-purple-900/20 border border-purple-600 rounded-lg p-4">
+                <div className="text-purple-400 font-bold mb-2">⚡ Technical Tips</div>
+                <ul className="text-tertiary space-y-1 text-sm">
+                  <li>• Use familiar technologies</li>
+                  <li>• Leverage APIs and libraries</li>
+                  <li>• Focus on functionality over perfection</li>
+                  <li>• Have backup plans ready</li>
+                </ul>
               </div>
             </div>
           </>
@@ -308,10 +378,13 @@ export default function Fall2025Hackathon() {
           {/* Event Title */}
           <div className="mb-16">
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4 tracking-tight">
-              FALL HACKATHON
+              SCE HACKS 1.0
             </h1>
             <div className="text-2xl md:text-3xl text-accent font-medium">
-              September 5, 2025 • 9:15 AM - 4:30 PM PT
+              w/ Mintlify
+            </div>
+            <div className="text-xl md:text-2xl text-tertiary mt-4">
+              September 5, 2025 • 9:00 AM - 4:45 PM PT
             </div>
             <div className="text-lg md:text-xl text-tertiary mt-2">
               MLK Library Room 225
@@ -330,7 +403,7 @@ export default function Fall2025Hackathon() {
                 SEPTEMBER 5, 2025
               </div>
               <div className="text-lg text-tertiary mb-4">
-                9:15 AM - 4:30 PM Pacific Time
+                9:00 AM - 4:45 PM Pacific Time
               </div>
             </div>
           </div>
@@ -348,7 +421,7 @@ export default function Fall2025Hackathon() {
                 <nav className="space-y-4">
                   <button 
                     onClick={() => setActiveSection(1)}
-                    className={`w-full text-left text-lg font-bold pb-2 transition-colors ${
+                    className={`w-full text-left text-lg font-bold pb-2 transition-colors cursor-pointer ${
                       activeSection === 1 
                         ? 'text-foreground border-b border-secondary' 
                         : 'text-tertiary hover:text-foreground'
@@ -358,7 +431,7 @@ export default function Fall2025Hackathon() {
                   </button>
                   <button 
                     onClick={() => setActiveSection(2)}
-                    className={`w-full text-left text-lg font-bold transition-colors ${
+                    className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
                       activeSection === 2 
                         ? 'text-foreground border-b border-secondary pb-2' 
                         : 'text-tertiary hover:text-foreground'
@@ -368,13 +441,23 @@ export default function Fall2025Hackathon() {
                   </button>
                   <button 
                     onClick={() => setActiveSection(3)}
-                    className={`w-full text-left text-lg font-bold transition-colors ${
+                    className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
                       activeSection === 3 
                         ? 'text-foreground border-b border-secondary pb-2' 
                         : 'text-tertiary hover:text-foreground'
                     }`}
                   >
                     3. SUBMISSION
+                  </button>
+                  <button 
+                    onClick={() => setActiveSection(4)}
+                    className={`w-full text-left text-lg font-bold transition-colors cursor-pointer ${
+                      activeSection === 4 
+                        ? 'text-foreground border-b border-secondary pb-2' 
+                        : 'text-tertiary hover:text-foreground'
+                    }`}
+                  >
+                    4. TIPS & PRIZES
                   </button>
                 </nav>
               </div>

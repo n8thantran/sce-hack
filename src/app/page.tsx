@@ -22,7 +22,7 @@ const hackathons = {
   upcoming: [
     {
       id: 1,
-      name: "Fall 2025 Hackathon",
+      name: "SCE Hacks 1.0 w/ Mintlify",
       date: "September 5, 2025",
       startTime: "9:00 AM",
       endTime: "5:00 PM",

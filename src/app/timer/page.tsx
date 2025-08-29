@@ -29,7 +29,7 @@ export default function TimerPage() {
         // Before hackathon starts
         targetDate = hackathonDate;
         phase = 'before';
-        text = 'Until Fall 2025 Hackathon Begins';
+        text = 'Until SCE Hacks 1.0 w/ Mintlify Begins';
       } else if (now < hackingStartTime.getTime()) {
         // Hackathon started but hacking hasn't begun yet (opening ceremony, etc.)
         targetDate = hackingStartTime;
@@ -44,7 +44,7 @@ export default function TimerPage() {
         // Hackathon has ended
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setCurrentPhase('ended');
-        setPhaseText('Fall 2025 Hackathon Has Ended');
+        setPhaseText('SCE Hacks 1.0 w/ Mintlify Has Ended');
         return;
       }
       
@@ -141,7 +141,7 @@ export default function TimerPage() {
 
           {/* Event Title */}
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
-            FALL 2025 HACKATHON
+            SCE Hacks 1.0 w/ Mintlify
           </h1>
 
           {/* Event Details */}
