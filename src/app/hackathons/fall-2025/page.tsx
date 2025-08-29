@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Fall2025Hackathon() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -550,6 +551,7 @@ export default function Fall2025Hackathon() {
           </div>
         </div>
       </footer>
+      <Analytics/>
     </div>
     </>
   );

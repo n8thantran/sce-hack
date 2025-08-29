@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Fall2025TimerPage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -277,6 +278,7 @@ export default function Fall2025TimerPage() {
           </div>
         </div>
       </footer>
+      <Analytics/>
     </div>
   );
 }
