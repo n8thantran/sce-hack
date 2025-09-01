@@ -1,108 +1,60 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import HackathonTimerSection from "@/components/hackathon-timer-section";
+
+export const dynamic = "force-dynamic";
 
 export default function Fall2025TimerPage() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-  const [currentPhase, setCurrentPhase] = useState('before'); // 'before', 'hacking', 'ended'
-  const [phaseText, setPhaseText] = useState('');
+  const serverNow = Date.now();
+  const hackathonDate = new Date("2025-09-05T09:00:00-07:00").getTime();
+  const hackingStart = new Date("2025-09-05T10:00:00-07:00").getTime();
+  const hackingEnd = new Date("2025-09-05T15:00:00-07:00").getTime();
 
-  useEffect(() => {
-    const hackathonDate = new Date("2025-09-05T09:00:00-07:00"); // September 5, 2025 at 9:00 AM PT
-    const hackingStartTime = new Date("2025-09-05T10:00:00-07:00"); // Hacking starts at 10:00 AM PT
-    const hackingEndTime = new Date("2025-09-05T15:00:00-07:00"); // Hacking ends at 3:00 PM PT (submission deadline)
-    
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      let targetDate;
-      let phase;
-      let text;
-      
-      if (now < hackathonDate.getTime()) {
-        // Before hackathon starts
-        targetDate = hackathonDate;
-        phase = 'before';
-        text = 'Time until SCE Hacks 1.0 w/ Mintlify Begins';
-      } else if (now < hackingStartTime.getTime()) {
-        // Hackathon started but hacking hasn't begun yet (opening ceremony, etc.)
-        targetDate = hackingStartTime;
-        phase = 'before-hacking';
-        text = 'Time until Hacking Time Begins';
-      } else if (now < hackingEndTime.getTime()) {
-        // Currently in hacking time
-        targetDate = hackingEndTime;
-        phase = 'hacking';
-        text = 'Hacking Time Remaining';
-      } else {
-        // Hackathon has ended
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        setCurrentPhase('ended');
-        setPhaseText('SCE Hacks 1.0 w/ Mintlify Has Ended');
-        return;
-      }
-      
-      setCurrentPhase(phase);
-      setPhaseText(text);
-      const distance = targetDate.getTime() - now;
-      
-      if (distance < 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
+  let phaseText = "";
+  let phase: "before" | "before-hacking" | "hacking" | "ended" = "before";
+  let target = hackathonDate;
+  if (serverNow < hackathonDate) {
+    phase = "before";
+    phaseText = "Time until SCE Hacks 1.0 w/ Mintlify Begins";
+    target = hackathonDate;
+  } else if (serverNow < hackingStart) {
+    phase = "before-hacking";
+    phaseText = "Time until Hacking Time Begins";
+    target = hackingStart;
+  } else if (serverNow < hackingEnd) {
+    phase = "hacking";
+    phaseText = "Hacking Time Remaining";
+    target = hackingEnd;
+  } else {
+    phase = "ended";
+    phaseText = "SCE Hacks 1.0 w/ Mintlify Has Ended";
+    target = serverNow;
+  }
 
-    return () => clearInterval(timer);
-  }, []);
-
-  const getPhaseColor = () => {
-    switch (currentPhase) {
-      case 'before':
-      case 'before-hacking':
-        return 'text-blue-400';
-      case 'hacking':
-        return 'text-red-400 animate-pulse';
-      case 'ended':
-        return 'text-gray-400';
-      default:
-        return 'text-blue-400';
-    }
-  };
-
-  const getBackgroundGradient = () => {
-    switch (currentPhase) {
-      case 'before':
-      case 'before-hacking':
-        return 'bg-gradient-to-br from-blue-900/20 to-purple-900/20';
-      case 'hacking':
-        return 'bg-gradient-to-br from-red-900/20 to-orange-900/20';
-      case 'ended':
-        return 'bg-gradient-to-br from-gray-900/20 to-slate-900/20';
-      default:
-        return 'bg-gradient-to-br from-blue-900/20 to-purple-900/20';
-    }
+  const distance = Math.max(0, target - serverNow);
+  const initial = {
+    phase,
+    phaseText,
+    timeLeft: {
+      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((distance % (1000 * 60)) / 1000),
+    },
   };
 
   return (
-    <div className={`min-h-screen ${getBackgroundGradient()} text-foreground`}>
+    <div
+      className={`min-h-screen bg-gradient-to-br from-blue-900/20 to-purple-900/20 text-foreground`}
+    >
       {/* Header */}
       <header className="border-b border-secondary py-6">
         <div className="max-w-7xl mx-auto px-6 flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+          <Link
+            href="/"
+            className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+          >
             <Image
               src="/sce-logo.png"
               alt="SCE SJSU Logo"
@@ -111,18 +63,22 @@ export default function Fall2025TimerPage() {
               className="rounded"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">SCE Hackathons</h1>
-              <p className="text-sm text-tertiary">Software & Computer Engineering Society</p>
+              <h1 className="text-xl font-bold text-foreground">
+                SCE Hackathons
+              </h1>
+              <p className="text-sm text-tertiary">
+                Software & Computer Engineering Society
+              </p>
             </div>
           </Link>
           <div className="ml-auto">
-            <Link 
+            <Link
               href="/"
               className="text-accent hover:text-accent/80 font-medium transition-colors mr-4"
             >
               ← All Hackathons
             </Link>
-            <Link 
+            <Link
               href="/hackathons/fall-2025"
               className="text-accent hover:text-accent/80 font-medium transition-colors"
             >
@@ -135,25 +91,12 @@ export default function Fall2025TimerPage() {
       {/* Main Timer Content */}
       <main className="flex-1 flex items-center justify-center px-6 py-16">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Phase Text */}
-          <div className={`text-2xl md:text-3xl font-bold mb-8 ${getPhaseColor()}`}>
-            {phaseText.includes('Mintlify') ? (
-              <>
-                {phaseText.split('Mintlify')[0]}
-                <span style={{ color: '#18e299' }}>Mintlify</span>
-                {phaseText.split('Mintlify')[1]}
-              </>
-            ) : (
-              phaseText
-            )}
-          </div>
-
           {/* Event Title */}
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
             SCE HACKS 1.0
           </h1>
           <div className="text-2xl md:text-3xl text-accent font-medium mb-8">
-            w/ <span style={{ color: '#18e299' }}>Mintlify</span>
+            w/ <span style={{ color: "#18e299" }}>Mintlify</span>
           </div>
 
           {/* Event Details */}
@@ -163,87 +106,27 @@ export default function Fall2025TimerPage() {
             <div>MLK Library Room 225</div>
           </div>
 
-          {/* Countdown Timer */}
-          {currentPhase !== 'ended' ? (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12">
-              <div className="bg-background/50 border border-secondary rounded-lg p-6">
-                <div className={`text-4xl md:text-6xl font-bold ${getPhaseColor()}`}>
-                  {timeLeft.days}
-                </div>
-                <div className="text-tertiary text-sm md:text-base font-medium uppercase tracking-wider">
-                  Days
-                </div>
-              </div>
-              <div className="bg-background/50 border border-secondary rounded-lg p-6">
-                <div className={`text-4xl md:text-6xl font-bold ${getPhaseColor()}`}>
-                  {timeLeft.hours}
-                </div>
-                <div className="text-tertiary text-sm md:text-base font-medium uppercase tracking-wider">
-                  Hours
-                </div>
-              </div>
-              <div className="bg-background/50 border border-secondary rounded-lg p-6">
-                <div className={`text-4xl md:text-6xl font-bold ${getPhaseColor()}`}>
-                  {timeLeft.minutes}
-                </div>
-                <div className="text-tertiary text-sm md:text-base font-medium uppercase tracking-wider">
-                  Minutes
-                </div>
-              </div>
-              <div className="bg-background/50 border border-secondary rounded-lg p-6">
-                <div className={`text-4xl md:text-6xl font-bold ${getPhaseColor()}`}>
-                  {timeLeft.seconds}
-                </div>
-                <div className="text-tertiary text-sm md:text-base font-medium uppercase tracking-wider">
-                  Seconds
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="bg-background/50 border border-secondary rounded-lg p-12 mb-12">
-              <div className="text-4xl md:text-6xl font-bold text-gray-400 mb-4">
-                🏁
-              </div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-400">
-                Hackathon Complete!
-              </div>
-              <div className="text-lg text-tertiary mt-4">
-                Thank you to all participants. See you at the next event!
-              </div>
-            </div>
-          )}
-
-          {/* Phase-specific Messages */}
-          {currentPhase === 'hacking' && (
-            <div className="bg-red-900/20 border border-red-600 rounded-lg p-6 mb-8">
-              <div className="text-red-400 font-bold text-xl mb-2">🔴 HACKING TIME IS LIVE!</div>
-              <div className="text-tertiary">
-                Projects must be submitted by 3:00 PM PT. Good luck!
-              </div>
-            </div>
-          )}
-
-          {(currentPhase === 'before' || currentPhase === 'before-hacking') && (
-            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-6 mb-8">
-              <div className="text-blue-400 font-bold text-xl mb-2">📅 Get Ready!</div>
-              <div className="text-tertiary">
-                {currentPhase === 'before' 
-                  ? "Don't forget to bring your laptop, charger, and development tools!"
-                  : "Opening ceremony in progress. Hacking begins soon!"
-                }
-              </div>
-            </div>
-          )}
+          <HackathonTimerSection
+            hackathonDateIso="2025-09-05T09:00:00-07:00"
+            hackingStartIso="2025-09-05T10:00:00-07:00"
+            hackingEndIso="2025-09-05T15:00:00-07:00"
+            phaseTextBefore="Time until SCE Hacks 1.0 w/ Mintlify Begins"
+            phaseTextBeforeHacking="Time until Hacking Time Begins"
+            phaseTextHacking="Hacking Time Remaining"
+            phaseTextEnded="SCE Hacks 1.0 w/ Mintlify Has Ended"
+            initial={initial}
+            serverNowMs={serverNow}
+          />
 
           {/* Quick Links */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/hackathons/fall-2025"
               className="bg-accent hover:bg-accent/90 text-background font-bold py-3 px-6 rounded-lg transition-colors"
             >
               View Full Details
             </Link>
-            <Link 
+            <Link
               href="/"
               className="bg-background/50 hover:bg-background/70 border border-secondary text-foreground font-bold py-3 px-6 rounded-lg transition-colors"
             >
@@ -269,7 +152,9 @@ export default function Fall2025TimerPage() {
                 <div className="text-foreground text-sm font-medium">
                   Software & Computer Engineering Society
                 </div>
-                <div className="text-tertiary text-xs">San José State University</div>
+                <div className="text-tertiary text-xs">
+                  San José State University
+                </div>
               </div>
             </div>
             <div className="text-tertiary text-sm">
@@ -278,7 +163,7 @@ export default function Fall2025TimerPage() {
           </div>
         </div>
       </footer>
-      <Analytics/>
+      <Analytics />
     </div>
   );
 }
