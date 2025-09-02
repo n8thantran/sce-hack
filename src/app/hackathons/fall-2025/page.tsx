@@ -219,7 +219,7 @@ export default function Fall2025Hackathon() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400">📹</span>
-                <span><strong className="text-foreground">Demo Video (Optional):</strong> 2-3 minute demonstration of your project&pos;s functionality</span>
+                <span><strong className="text-foreground">Demo Video (Optional):</strong> 2-3 minute demonstration of your project&#39;s functionality</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400">✓</span>
