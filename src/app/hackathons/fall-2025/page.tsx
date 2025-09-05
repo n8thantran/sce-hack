@@ -369,6 +369,18 @@ export default function Fall2025Hackathon() {
                 </div>
                 <div className="text-purple-400 font-bold text-2xl">$200</div>
               </div>
+
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-purple-900/30 to-purple-800/20 border border-purple-600 rounded-lg">
+                <div>
+                  <div className="text-foreground font-bold text-lg">
+                    🤖 Cybersecurity
+                  </div>
+                  <div className="text-foreground text-sm">
+                    Useful and well-executed project with cybersecurity in mind
+                  </div>
+                </div>
+                <div className="text-purple-400 font-bold text-2xl">$200</div>
+              </div>
             </div>
 
             <h3 className="text-xl font-bold text-foreground mb-4 hack-text-glow-accent">
@@ -509,8 +521,9 @@ export default function Fall2025Hackathon() {
                   Demo & Presentation (Communication & Clarity)
                 </h4>
                 <p className="text-foreground mb-4 text-sm">
-                  Assesses how effectively the team communicates their project's
-                  purpose, features, and impact to judges and audience.
+                  Assesses how effectively the team communicates their
+                  project&apos;s purpose, features, and impact to judges and
+                  audience.
                 </p>
                 <div className="grid grid-cols-6 gap-3">
                   <div className="text-center">
