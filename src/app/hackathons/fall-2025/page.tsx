@@ -68,7 +68,7 @@ export default function Fall2025Hackathon() {
         title: "Introduction",
         content: (
           <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
               Join us for{" "}
               <strong className="text-foreground">
                 SCE Hacks 1.0 w/{" "}
@@ -93,7 +93,7 @@ export default function Fall2025Hackathon() {
               What to Expect
             </h3>
 
-            <ul className="space-y-3 text-tertiary">
+            <ul className="space-y-3 text-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
                 <span>5 hours of focused coding and development time</span>
@@ -101,10 +101,6 @@ export default function Fall2025Hackathon() {
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
                 <span>Fireside chat with industry professionals</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-accent">•</span>
-                <span>Optional Hackathon 101 workshop for beginners</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
@@ -128,7 +124,7 @@ export default function Fall2025Hackathon() {
         title: "Schedule & Important Info",
         content: (
           <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
               Here&apos;s the detailed schedule for Friday, September 5, 2025.
               The event runs from 9:00 AM to 4:45 PM with check-in, fireside
               chat, hacking time, judging, and closing ceremony.
@@ -145,7 +141,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Hacker check-in & breakfast
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Croissants, seating - check-in closes promptly at 9:30 AM
                   </div>
                 </div>
@@ -156,7 +152,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Opening Ceremony
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     President Introduction, SCE GLAZE, Mizan + Ryan yap
                   </div>
                 </div>
@@ -167,7 +163,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Fireside Chat
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Hosted by Ryan + Hahnbee
                   </div>
                 </div>
@@ -178,18 +174,9 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Hacking officially begins
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Ryan + Mizan Announce
                   </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
-                <span className="text-accent font-bold">10:00 – 10:30 AM</span>
-                <div>
-                  <div className="text-foreground font-medium">
-                    Optional Workshop
-                  </div>
-                  <div className="text-tertiary text-sm">TBD</div>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 bg-secondary/10 rounded-lg">
@@ -198,7 +185,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Hacking ends; judging begins
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Final deadline for project submissions
                   </div>
                 </div>
@@ -209,7 +196,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Judging concludes
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     All project evaluations completed
                   </div>
                 </div>
@@ -220,33 +207,18 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-medium">
                     Closing Ceremony
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Winners announcement and wrap-up
                   </div>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-foreground mb-4 mt-8">
-              Optional Workshops
-            </h3>
-
-            <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-4 mb-6">
-              <div className="text-blue-400 font-bold mb-2">
-                📚 Optional Workshop Available
-              </div>
-              <p className="text-tertiary">
-                One optional workshop will be available during the event from
-                10:00 - 10:30 AM. You can attend or skip it - it&apos;s
-                completely up to you and your team&apos;s needs!
-              </p>
-            </div>
-
             <div className="bg-red-900/20 border border-red-600 rounded-lg p-4">
               <div className="text-red-400 font-bold mb-2">
                 ⚠ Important Reminders
               </div>
-              <ul className="text-tertiary space-y-1">
+              <ul className="text-foreground space-y-1">
                 <li>
                   • Bring your laptop, charger, and any development tools you
                   need
@@ -270,7 +242,7 @@ export default function Fall2025Hackathon() {
         title: "Submission Guidelines",
         content: (
           <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
               Follow these guidelines to ensure your project is properly
               submitted and eligible for judging. All submissions must be
               completed by 3:00 PM on September 5, 2025.
@@ -280,7 +252,7 @@ export default function Fall2025Hackathon() {
               <div className="text-blue-400 font-bold mb-2">
                 📋 Submission Requirements
               </div>
-              <p className="text-tertiary">
+              <p className="text-foreground">
                 All projects must include working code, documentation, and a
                 demo video or live presentation.
               </p>
@@ -290,7 +262,7 @@ export default function Fall2025Hackathon() {
               Required Components
             </h3>
 
-            <ul className="space-y-3 text-tertiary mb-6">
+            <ul className="space-y-3 text-foreground mb-6">
               <li className="flex items-start gap-3">
                 <span className="text-green-400">✓</span>
                 <span>
@@ -301,10 +273,8 @@ export default function Fall2025Hackathon() {
               <li className="flex items-start gap-3">
                 <span className="text-blue-400">📹</span>
                 <span>
-                  <strong className="text-foreground">
-                    Demo Video (Optional):
-                  </strong>{" "}
-                  2-3 minute demonstration of your project&#39;s functionality
+                  <strong className="text-foreground">Demo Video:</strong> 2-3
+                  minute demonstration of your project&#39;s functionality
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -327,11 +297,11 @@ export default function Fall2025Hackathon() {
               <div className="text-accent font-bold mb-2">
                 📝 Submission Platform
               </div>
-              <p className="text-tertiary mb-4">
+              <p className="text-foreground">
                 Submit your project through our official hackathon platform.
                 Link will be provided during the event.
               </p>
-              <div className="text-sm text-tertiary">
+              <div className="text-sm text-foreground">
                 <strong>Deadline:</strong> September 5, 2025 at 3:00 PM PT
               </div>
             </div>
@@ -342,7 +312,7 @@ export default function Fall2025Hackathon() {
         title: "Tips & Prizes",
         content: (
           <>
-            <p className="text-lg text-tertiary mb-6 leading-relaxed">
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
               Get ready to compete for amazing prizes! Here are the prize tracks
               and some helpful tips to maximize your chances of success.
             </p>
@@ -357,7 +327,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-bold text-lg">
                     🏆 Best Overall
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Most impressive project across all criteria
                   </div>
                 </div>
@@ -369,7 +339,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-bold text-lg">
                     🚀 Most Likely to be a Startup
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Project with the highest commercial potential
                   </div>
                 </div>
@@ -381,7 +351,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-bold text-lg">
                     🎨 Best UI/UX
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Most intuitive and visually appealing design
                   </div>
                 </div>
@@ -393,7 +363,7 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground font-bold text-lg">
                     😄 Most Useless
                   </div>
-                  <div className="text-tertiary text-sm">
+                  <div className="text-foreground text-sm">
                     Hilariously impractical but well-executed project
                   </div>
                 </div>
@@ -410,7 +380,7 @@ export default function Fall2025Hackathon() {
                 <div className="text-blue-400 font-bold mb-2">
                   💡 Project Planning
                 </div>
-                <ul className="text-tertiary space-y-1 text-sm">
+                <ul className="text-foreground space-y-1 text-sm">
                   <li>• Start simple and iterate</li>
                   <li>• Focus on core functionality first</li>
                   <li>• Plan your MVP within 3-4 hours</li>
@@ -422,7 +392,7 @@ export default function Fall2025Hackathon() {
                 <div className="text-green-400 font-bold mb-2">
                   👥 Team Strategy
                 </div>
-                <ul className="text-tertiary space-y-1 text-sm">
+                <ul className="text-foreground space-y-1 text-sm">
                   <li>• Divide tasks based on strengths</li>
                   <li>• Communicate frequently</li>
                   <li>• Use version control (Git)</li>
@@ -434,7 +404,7 @@ export default function Fall2025Hackathon() {
                 <div className="text-yellow-400 font-bold mb-2">
                   🏆 Winning Tips
                 </div>
-                <ul className="text-tertiary space-y-1 text-sm">
+                <ul className="text-foreground space-y-1 text-sm">
                   <li>• Tell a compelling story</li>
                   <li>• Demo, don&apos;t just show code</li>
                   <li>• Highlight unique features</li>
@@ -446,7 +416,7 @@ export default function Fall2025Hackathon() {
                 <div className="text-purple-400 font-bold mb-2">
                   ⚡ Technical Tips
                 </div>
-                <ul className="text-tertiary space-y-1 text-sm">
+                <ul className="text-foreground space-y-1 text-sm">
                   <li>• Use familiar technologies</li>
                   <li>• Leverage APIs and libraries</li>
                   <li>• Focus on functionality over perfection</li>
@@ -461,92 +431,201 @@ export default function Fall2025Hackathon() {
         title: "Judging Rubric",
         content: (
           <>
-            <p className="text-lg text-readable mb-8 leading-relaxed">
+            <p className="text-lg text-foreground mb-8 leading-relaxed">
               Projects will be judged based on the following criteria. Each
-              category is scored on a scale from 0 to 5. Pay close attention to
-              the Vibe-coding penalty!
+              category is scored on a scale from 0 to 5 points. Teams will be
+              evaluated across three core dimensions that collectively determine
+              their ranking and prize eligibility.
             </p>
 
-            {/* Rubric Table */}
-            <div className="border border-secondary rounded-lg overflow-hidden">
-              {/* Header */}
-              <div className="grid grid-cols-6 text-center font-bold bg-secondary/20">
-                <div className="p-3 border-r border-secondary">Criteria</div>
-                <div className="p-3 border-r border-secondary">0</div>
-                <div className="p-3 border-r border-secondary">1-2</div>
-                <div className="p-3 border-r border-secondary">3</div>
-                <div className="p-3 border-r border-secondary">4</div>
-                <div className="p-3">5</div>
+            {/* Main Judging Criteria */}
+            <div className="space-y-8 mb-10">
+              {/* Category 1: Does It Work? */}
+              <div className="bg-blue-900/20 border border-blue-600 rounded-lg p-6 hack-border-glow">
+                <h4 className="text-xl font-bold text-foreground mb-4 hack-text-glow-accent">
+                  Does It Work? (Functionality & Implementation)
+                </h4>
+                <p className="text-foreground mb-4 text-sm">
+                  Evaluates whether the core features function as intended and
+                  the overall stability of the implementation.
+                </p>
+                <div className="grid grid-cols-6 gap-3">
+                  <div className="text-center">
+                    <div className="bg-red-900/30 border border-red-600 rounded-lg p-3 mb-2">
+                      <div className="text-red-400 font-bold text-lg">
+                        0 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      No working implementation
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-orange-900/30 border border-orange-600 rounded-lg p-3 mb-2">
+                      <div className="text-orange-400 font-bold text-lg">
+                        1-2 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Barely works, mostly conceptual
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-yellow-900/30 border border-yellow-600 rounded-lg p-3 mb-2">
+                      <div className="text-yellow-400 font-bold text-lg">
+                        3 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Some features work, key features incomplete
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-lime-900/30 border border-lime-600 rounded-lg p-3 mb-2">
+                      <div className="text-lime-400 font-bold text-lg">
+                        4 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Most features work, minor bugs present
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-900/30 border border-green-600 rounded-lg p-3 mb-2">
+                      <div className="text-green-400 font-bold text-lg">
+                        5 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Functions as intended, smooth operation
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Row 1: Does It Work? */}
-              <div className="grid grid-cols-6 text-sm border-t border-secondary">
-                <div className="p-3 border-r border-secondary font-medium text-foreground">
-                  Does It Work?
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  No Working Implementation
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Barely works, mostly conceptual
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Some features work, key features are incomplete/broken
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Most features work, minor bugs don’t block demo
-                </div>
-                <div className="p-3 text-readable">
-                  The project functions as intended and core features work
-                  smoothly
+              {/* Category 2: Demo & Presentation */}
+              <div className="bg-purple-900/20 border border-purple-600 rounded-lg p-6 hack-border-glow">
+                <h4 className="text-xl font-bold text-foreground mb-4 hack-text-glow-accent">
+                  Demo & Presentation (Communication & Clarity)
+                </h4>
+                <p className="text-foreground mb-4 text-sm">
+                  Assesses how effectively the team communicates their project's
+                  purpose, features, and impact to judges and audience.
+                </p>
+                <div className="grid grid-cols-6 gap-3">
+                  <div className="text-center">
+                    <div className="bg-red-900/30 border border-red-600 rounded-lg p-3 mb-2">
+                      <div className="text-red-400 font-bold text-lg">
+                        0 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      No meaningful demo or presentation
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-orange-900/30 border border-orange-600 rounded-lg p-3 mb-2">
+                      <div className="text-orange-400 font-bold text-lg">
+                        1-2 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Struggled to communicate project purpose
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-yellow-900/30 border border-yellow-600 rounded-lg p-3 mb-2">
+                      <div className="text-yellow-400 font-bold text-lg">
+                        3 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Understandable but confusing or rushed
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-lime-900/30 border border-lime-600 rounded-lg p-3 mb-2">
+                      <div className="text-lime-400 font-bold text-lg">
+                        4 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Good explanation, lacks some polish
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-900/30 border border-green-600 rounded-lg p-3 mb-2">
+                      <div className="text-green-400 font-bold text-lg">
+                        5 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Clear, engaging, confident showcase
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Row 2: Demo & Presentation */}
-              <div className="grid grid-cols-6 text-sm border-t border-secondary">
-                <div className="p-3 border-r border-secondary font-medium text-foreground">
-                  Demo & Presentation
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  No meaningful demo/presentation
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Struggled to communicate what the project does
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Somewhat understandable, presentation may be confusing or
-                  rushed
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Good explanation, lacks polish/clarity in some areas
-                </div>
-                <div className="p-3 text-readable">
-                  Clear, engaging and confident. Showcases project features and
-                  impact
-                </div>
-              </div>
-
-              {/* Row 3: Technical Depth */}
-              <div className="grid grid-cols-6 text-sm border-t border-secondary">
-                <div className="p-3 border-r border-secondary font-medium text-foreground">
-                  Technical Depth
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  No technical work demonstrated.
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Minimal technical depth; mostly superficial.
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Basic technical implementation; straightforward or
-                  boilerplate.
-                </div>
-                <div className="p-3 border-r border-secondary text-readable">
-                  Solid technical work with some complexity.
-                </div>
-                <div className="p-3 text-readable">
-                  Sophisticated technical implementation; creative use of tools,
-                  APIs, algorithms, or architecture
+              {/* Category 3: Technical Depth */}
+              <div className="bg-cyan-900/20 border border-cyan-600 rounded-lg p-6 hack-border-glow">
+                <h4 className="text-xl font-bold text-foreground mb-4 hack-text-glow-accent">
+                  Technical Depth (Innovation & Complexity)
+                </h4>
+                <p className="text-foreground mb-4 text-sm">
+                  Evaluates the sophistication of technical implementation,
+                  creative use of technologies, and overall engineering quality.
+                </p>
+                <div className="grid grid-cols-6 gap-3">
+                  <div className="text-center">
+                    <div className="bg-red-900/30 border border-red-600 rounded-lg p-3 mb-2">
+                      <div className="text-red-400 font-bold text-lg">
+                        0 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      No technical work demonstrated
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-orange-900/30 border border-orange-600 rounded-lg p-3 mb-2">
+                      <div className="text-orange-400 font-bold text-lg">
+                        1-2 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Minimal depth, mostly superficial
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-yellow-900/30 border border-yellow-600 rounded-lg p-3 mb-2">
+                      <div className="text-yellow-400 font-bold text-lg">
+                        3 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Basic implementation, straightforward
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-lime-900/30 border border-lime-600 rounded-lg p-3 mb-2">
+                      <div className="text-lime-400 font-bold text-lg">
+                        4 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Solid technical work with complexity
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-900/30 border border-green-600 rounded-lg p-3 mb-2">
+                      <div className="text-green-400 font-bold text-lg">
+                        5 pts
+                      </div>
+                    </div>
+                    <div className="text-xs text-foreground">
+                      Sophisticated, creative implementation
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -555,11 +634,11 @@ export default function Fall2025Hackathon() {
             <h3 className="text-xl font-bold text-foreground mt-10 mb-4 hack-text-glow-accent">
               VIBE CODING PENALTY
             </h3>
-            <p className="text-readable mb-6">
+            <p className="text-foreground mb-6">
               A penalty or bonus may be applied based on the team&apos;s
               ownership and understanding of their project. This is to
-              discourage &quot;vibe-coding&quot; where team members cannot
-              explain their own work.
+              discourage mindless &quot;vibe-coding&quot; where team members
+              cannot explain their own work.
             </p>
             <div className="border border-red-600/50 rounded-lg overflow-hidden">
               {/* Header */}
@@ -572,21 +651,21 @@ export default function Fall2025Hackathon() {
               </div>
               {/* Descriptions */}
               <div className="grid grid-cols-5 text-center text-sm border-t border-red-600/50 bg-red-900/20">
-                <div className="p-3 border-r border-red-600/50 text-readable">
+                <div className="p-3 border-r border-red-600/50 text-foreground">
                   Severe deduction if the team clearly does not understand how
                   their own project works
                 </div>
-                <div className="p-3 border-r border-red-600/50 text-readable">
+                <div className="p-3 border-r border-red-600/50 text-foreground">
                   Team unable to explain basic functionality
                 </div>
-                <div className="p-3 border-r border-red-600/50 text-readable">
+                <div className="p-3 border-r border-red-600/50 text-foreground">
                   Team shows minor understanding, unable to answer technical
                   questions
                 </div>
-                <div className="p-3 border-r border-red-600/50 text-readable">
+                <div className="p-3 border-r border-red-600/50 text-foreground">
                   Team shows general understanding
                 </div>
-                <div className="p-3 text-readable">
+                <div className="p-3 text-foreground">
                   Team shows deep understanding about project, answers technical
                   questions confidently
                 </div>
@@ -596,7 +675,7 @@ export default function Fall2025Hackathon() {
             <h3 className="text-xl font-bold text-foreground mt-10 mb-4 hack-text-glow-accent">
               Judging Process & Guidelines
             </h3>
-            <ul className="space-y-3 text-readable">
+            <ul className="space-y-3 text-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-accent">•</span>
                 <span>
@@ -610,8 +689,8 @@ export default function Fall2025Hackathon() {
                 <span>
                   <strong className="text-foreground">Finalists:</strong> From
                   the screening, we will select the top 5 teams for the
-                  &quot;Best Overall&quot; track and the top 3 teams for each
-                  of the other 3 prize tracks.
+                  &quot;Best Overall&quot; track and the top 3 teams for each of
+                  the other 3 prize tracks.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -640,10 +719,10 @@ export default function Fall2025Hackathon() {
                 <span className="text-accent">•</span>
                 <span>
                   <strong className="text-foreground">Vibe Check:</strong> To
-                  gauge project ownership and discourage
-                  &quot;vibe-coding,&quot; judges will ask 1-2 deep
-                  technical questions about your project&apos;s implementation.
-                  Be prepared to explain your code!
+                  gauge project ownership and discourage mindless
+                  &quot;vibe-coding,&quot; judges will ask 1-2 deep technical
+                  questions about your project&apos;s implementation. Be
+                  prepared to explain your code!
                 </span>
               </li>
             </ul>
@@ -883,12 +962,12 @@ export default function Fall2025Hackathon() {
                   <div className="text-foreground text-sm font-medium">
                     Software & Computer Engineering Society
                   </div>
-                  <div className="text-tertiary text-xs">
+                  <div className="text-foreground text-xs">
                     San José State University
                   </div>
                 </div>
               </div>
-              <div className="text-tertiary text-sm">
+              <div className="text-foreground text-sm">
                 © 2025 SCE SJSU. All rights reserved.
               </div>
             </div>
